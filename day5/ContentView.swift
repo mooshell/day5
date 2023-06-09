@@ -9,15 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+                Text("Welcome to the root view!") }
+            .toolbar {
+                NavigationLink(destination: secondview()) {
+                    Text("next")
+                }
+            }
+                    .padding()
+                NavigationLink(destination: secondview()) {
+                    Text("take me to a new view")
+                }
+                .navigationTitle("Home")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarHidden(false)
+            }
         }
-        .padding()
+        
     }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
