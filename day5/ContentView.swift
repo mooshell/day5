@@ -11,7 +11,9 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Welcome to the root view!") }
+                Text("Welcome to the root view!")
+                Text("GITHUB HELP")
+            }
             .toolbar {
                 NavigationLink(destination: secondview()) {
                     Text("next")
